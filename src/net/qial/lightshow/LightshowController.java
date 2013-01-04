@@ -33,6 +33,9 @@ public class LightshowController implements Runnable {
 			//System.out.println("did frame");
 			if(runs % 10 == 0) {
 				System.out.println("rendered 10 frames");
+				LSUtil.outMatrix(grids.get(0).getMtx(), 0);
+				LSUtil.outMatrix(grids.get(0).getMtx(), 1);
+				LSUtil.outMatrix(grids.get(0).getMtx(), 2);
 			}
 		}
 	}

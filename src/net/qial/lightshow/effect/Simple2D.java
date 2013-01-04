@@ -16,13 +16,13 @@ public class Simple2D extends Effect {
 	}
 	
 	@Override
-	public int[][] next(int[][] mtx) {
+	public int[][][] next(int[][][] mtx) {
 		step++;
 		for(int x = 0; x < mtx.length; x++) {
 			for(int y = 0; y < mtx[x].length; y++) {
 				int amt = x+y+step;
 				double val = Math.sin(amt*Math.PI/16.0);
-				mtx[x][y] = (int)((val+1.0)*125.0);
+				mtx[x][y][2] = (int)((val+1.0)*125.0);
 				//mtx[x][y] = x*y;
 			}
 		}

@@ -8,13 +8,13 @@ import javax.swing.SwingUtilities;
 
 public class Grid {
 
-	private int[][] mtx;
+	private int[][][] mtx;
 	private Component view;
 	private List<Effect> effects;
 	
 	public Grid(int x, int y) {
 
-		mtx = new int[x][y];
+		mtx = new int[x][y][3];
 		effects = new ArrayList<Effect>();
 		init();
 	}
@@ -23,7 +23,7 @@ public class Grid {
 		// set a default starting value
 		for(int x =0;x<mtx.length;x++) {
 			for(int y=0;y<mtx[x].length;y++) {
-				mtx[x][y] = (x+y)*12;
+				//mtx[x][y][2] = (x+y)*12;
 			}
 		}
 	}
@@ -46,7 +46,7 @@ public class Grid {
 			}});
 	}
 	
-	public int[][] getMtx() {
+	public int[][][] getMtx() {
 		return mtx;
 	}
 
@@ -54,7 +54,7 @@ public class Grid {
 		return effects;
 	}
 
-	public void update(int[][] next) {
+	public void update(int[][][] next) {
 //		for(int x = 0; x < mtx.length; x++) {
 //			for(int y = 0; y < mtx[x].length; y++) {
 //				mtx[x][y] = next[x][y];

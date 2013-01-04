@@ -15,7 +15,7 @@ public class Simple2DCircle extends Effect {
 	}
 	
 	@Override
-	public int[][] next(int[][] mtx) {
+	public int[][][] next(int[][][] mtx) {
 		step++;
 		for(int x = 0; x < mtx.length; x++) {
 			double xIdx = (x*Math.PI)/3.0 + (step*Math.PI)/3.0;
@@ -25,7 +25,7 @@ public class Simple2DCircle extends Effect {
 				
 				double yIdx = (y*Math.PI)/12.0 + (step*Math.PI)/12.0;
 				double yVal = Math.cos(yIdx);
-				mtx[x][y] = (int) (yVal*125) + 128;
+				mtx[x][y][2] = (int) (yVal*125) + 128;
 			}
 		}
 		return mtx;

@@ -21,14 +21,14 @@ public class GridView extends Component {
 	}
 
 	public void paint(Graphics g) {
-		int[][] mtx = grid.getMtx();
+		int[][][] mtx = grid.getMtx();
 		int xscale = width/mtx.length;
 		int yscale = height/mtx[0].length;
 		for(int x = 0; x < mtx.length; x++) {
 			for(int y = 0; y < mtx[x].length; y++) {
-				int val = mtx[x][y];
+				int[] color = mtx[x][y];
 				
-				Color c = getColor(val);
+				Color c = getColor(color);
 				g.setColor(c);
 				
 				g.fillRect(x*xscale, y*yscale, xscale, yscale);
@@ -36,9 +36,9 @@ public class GridView extends Component {
 		}
 	}
 	
-	private Color getColor(int value) {
+	private Color getColor(int[] value) {
 		// for this, we just make a blue color
-		Color c = new Color(0, 0, value);
+		Color c = new Color(value[0], value[1], value[2]);
 		return c;
 	}
 }
