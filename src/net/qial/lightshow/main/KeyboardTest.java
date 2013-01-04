@@ -1,8 +1,8 @@
-package net.qial.lightshow.control;
+package net.qial.lightshow.main;
 
 import net.qial.lightshow.Grid;
-import net.qial.lightshow.LightshowController;
 import net.qial.lightshow.LightshowFrame;
+import net.qial.lightshow.control.LightshowController;
 
 
 

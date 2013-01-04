@@ -1,8 +1,11 @@
-package net.qial.lightshow;
+package net.qial.lightshow.control;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import net.qial.lightshow.Effect;
+import net.qial.lightshow.Grid;
+import net.qial.lightshow.LSUtil;
 import net.qial.lightshow.effect.*;
 
 public class LightshowController implements Runnable {
