@@ -38,12 +38,12 @@ public class Grid {
 	
 	public void refresh() {
 		final Component theview = view;
-		SwingUtilities.invokeLater(new Runnable(){
-
+		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
 				theview.repaint();
-			}});
+			}
+		});
 	}
 	
 	public int[][][] getMtx() {
