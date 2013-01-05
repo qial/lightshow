@@ -15,7 +15,6 @@ public class CircleGrid extends Effect {
 		
 	}
 	
-	@Override
 	public int[][][] next(int[][][] mtx) {
 		step++;
 		for(int x = 0; x < mtx.length; x++) {
@@ -33,6 +32,12 @@ public class CircleGrid extends Effect {
 		//LSUtil.outMatrix(mtx);
 		
 		return mtx;
+	}
+
+	@Override
+	public void applyStep(int[][][] mtx, int step) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

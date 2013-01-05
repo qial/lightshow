@@ -6,7 +6,6 @@ public class VerticalBar extends Effect {
 	
 	private int step = 0;
 	
-	@Override
 	public int[][][] next(int[][][] mtx) {
 		step++;
 		int x = step%mtx.length;
@@ -14,6 +13,12 @@ public class VerticalBar extends Effect {
 			mtx[x][y][2] = 250;
 		}
 		return mtx;
+	}
+
+	@Override
+	public void applyStep(int[][][] mtx, int step) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

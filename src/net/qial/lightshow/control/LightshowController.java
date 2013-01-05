@@ -23,7 +23,9 @@ public class LightshowController implements Runnable {
 			for(Grid g : grids) {
 				for(Effect e : g.getEffects()) {
 					//e.update(g.getMtx());
-					g.update(e.next(g.getMtx()));
+					// code is broken cause I changed the API of Effect
+					// but thats fine cause this code was lame =P
+					//g.update(e.next(g.getMtx()));
 				}
 				//System.out.println(g.getMtx());
 				g.refresh();

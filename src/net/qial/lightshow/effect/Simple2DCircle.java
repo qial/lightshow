@@ -14,7 +14,6 @@ public class Simple2DCircle extends Effect {
 		
 	}
 	
-	@Override
 	public int[][][] next(int[][][] mtx) {
 		step++;
 		for(int x = 0; x < mtx.length; x++) {
@@ -29,6 +28,12 @@ public class Simple2DCircle extends Effect {
 			}
 		}
 		return mtx;
+	}
+
+	@Override
+	public void applyStep(int[][][] mtx, int step) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
