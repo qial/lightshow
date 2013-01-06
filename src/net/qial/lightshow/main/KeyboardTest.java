@@ -5,6 +5,7 @@ import net.qial.lightshow.Grid;
 import net.qial.lightshow.LSUtil;
 import net.qial.lightshow.LightshowFrame;
 import net.qial.lightshow.control.EffectController;
+import net.qial.lightshow.control.KeyboardHandler;
 import net.qial.lightshow.control.LightshowController;
 import net.qial.lightshow.effect.ColorFlash;
 
@@ -20,6 +21,10 @@ public class KeyboardTest {
 		
 		EffectController controller = new EffectController();
 		controller.setGrid(grid);
+		
+		KeyboardHandler key = new KeyboardHandler();
+		key.setControl(controller);
+		frame.addKeyListener(key);
 		
 //		Thread t = new Thread(controller);
 //		t.start();
@@ -44,7 +49,7 @@ public class KeyboardTest {
 			//System.out.println("did frame");
 			if(runs % 10 == 0) {
 				System.out.println("rendered 10 frames");
-				control.addEffect(new ColorFlash());
+				//control.addEffect(new ColorFlash());
 //				LSUtil.outMatrix(grids.get(0).getMtx(), 0);
 //				LSUtil.outMatrix(grids.get(0).getMtx(), 1);
 //				LSUtil.outMatrix(grids.get(0).getMtx(), 2);

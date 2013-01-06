@@ -2,15 +2,15 @@ package net.qial.lightshow.effect;
 
 import net.qial.lightshow.Effect;
 
-public class ColorFlash extends Effect {
+public class HalfColorFlash extends Effect {
 	
 	private int color = RED;
 	
-	public ColorFlash() {
+	public HalfColorFlash() {
 		this(10,RED);
 	}
 	
-	public ColorFlash(int duration, int color) {
+	public HalfColorFlash(int duration, int color) {
 		super();
 		setDuration(duration);
 		this.color = color;
@@ -39,7 +39,7 @@ public class ColorFlash extends Effect {
 		}
 		
 		// apply flash
-		for(int x = 0; x < mtx.length; x++) {
+		for(int x = 0; x < mtx.length/2; x++) {
 			for(int y = 0; y < mtx[x].length; y++) {
 				mtx[x][y][color] = bright;
 			}

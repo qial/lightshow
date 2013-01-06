@@ -9,7 +9,7 @@ import javax.swing.SwingUtilities;
 public class Grid {
 
 	private int[][][] mtx;
-	private Component view;
+	private GridView view;
 	private List<Effect> effects;
 	
 	public Grid(int x, int y) {
@@ -32,16 +32,16 @@ public class Grid {
 		effects.add(e);
 	}
 	
-	public void setView(Component v ) {
+	public void setView(GridView v ) {
 		view = v;
 	}
 	
 	public void refresh() {
-		final Component theview = view;
+		final GridView theview = view;
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				theview.repaint();
+				theview.repaint(mtx);
 			}
 		});
 	}

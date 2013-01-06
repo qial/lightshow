@@ -32,7 +32,7 @@ public class LightshowFrame extends JFrame {
 	public void setGrid(Grid g ) {
 		grid = g;
 		view = new GridView(grid);
-		grid.setView(this);
+		grid.setView(view);
 		this.getContentPane().removeAll();
 		this.getContentPane().add(view);
 		System.out.println("GridView is set in frame");
